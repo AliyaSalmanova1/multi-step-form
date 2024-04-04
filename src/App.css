@@ -1,38 +1,72 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.page{
+  padding: 1em;
+  height: 100vh;
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  
+}
+*{
+  box-sizing: border-box;
+}
+
+.nav-container{
+  background-image: url(./images/purpleBg.png);
+  background-size: 100%;
+  background-repeat: no-repeat;
+  height: 100%;
+  width: 30%;
+
+  
+}
+
+.nav{
+
+  height: 40%;
+  margin: 2em 2em;
+  
+  
+
+}
+
+.nav a{
+
+
+  display: flex;
+  flex-direction: row;
+  text-decoration: none;
+  margin-bottom: 2em;
+  gap: 1em;
+
+}
+
+a:active{
+  background-color: white;
+
+
+}
+.link-text{
+  text-transform: uppercase;
   color: white;
+  
+}
+.link-text p{
+  opacity: 0.6;
+  margin: 0;
+}
+.link-text h3{
+  margin: 0.2em;
 }
 
-.App-link {
-  color: #61dafb;
+
+.circle{
+  border-radius: 30px;
+  border: 1px solid white;
+  height: 50px;
+  width: 50px;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
+
