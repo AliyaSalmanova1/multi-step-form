@@ -88,12 +88,31 @@ input{
   padding: .5em;
   font-size: 1.1rem;
   margin-bottom: 1em;
+
+}
+
+input:focus, input:active, input:focus-visible {
+  outline: 1px solid #483EFF;
+
 }
 
 button{
   padding: 1em 2em;
   float: right;
 
+}
+
+input:invalid, .redBorder{
+  border: 1px solid red;
+}
+.red-text{
+  color: red;
+  float: right;
+}
+
+.plan-option{
+  width: 138px;
+  height: 160px;
 }
 
 

@@ -1,8 +1,18 @@
 
+import { useState } from "react"
+
 function PersonalInfo({personalInfo, setPersonalInfo}){
 
+    const [phoneReq, setPhoneReq] = useState(false)
 
 
+   const validate = () => {
+    console.log('in validate', personalInfo.phone)
+    if (!personalInfo.phone) setPhoneReq(true)
+
+
+
+   }
   
 
 
@@ -25,12 +35,14 @@ function PersonalInfo({personalInfo, setPersonalInfo}){
                     type="email"
                     />
                 </label> 
-                <label>Phone Number<br/>
-                <input 
+                <label>Phone Number{phoneReq ? <span className="red-text">This field is required</span> : <></>}<br/>
+                    <input 
+                    className={`${phoneReq ? 'redBorder' : ''}`}
                     value={personalInfo.phone}
                     onChange={(e) => {
                         setPersonalInfo({...personalInfo, phone: e.target.value})}} 
                     type="number"
+                    placeholder="e.g. +1 234 567 890"
                     />
                 </label> 
                 
@@ -39,7 +51,7 @@ function PersonalInfo({personalInfo, setPersonalInfo}){
                 
                 
             </form>
-            <button>Next Step</button>
+            <button onClick={validate}>Next Step</button>
             
         </>
         
