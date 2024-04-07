@@ -7,6 +7,10 @@
 *{
   box-sizing: border-box;
 }
+h3, p{
+  margin: 0;
+  padding: 0;
+}
 
 .nav-container{
   background-image: url(./images/purpleBg.png);
@@ -91,12 +95,20 @@ a:active{
 
 }
 
-input:focus, input:active, input:focus-visible {
+.infoPage-text-input:focus, 
+.infoPage-text-input:active, 
+.infoPage-text-input:focus-visible {
   outline: 1px solid #483EFF;
 
 }
 
-button{
+.infoPage-text-input, 
+.nextStep-button,
+.megaCheckbox{
+  border-radius: 10px;
+}
+
+.nextStep-button{
   padding: 1em 2em;
   float: right;
 
@@ -179,6 +191,31 @@ input:checked + span{
 .lightText{
   color: #9699AA;
 }
+
+
+.megaCheckbox{
+
+  display: flex;
+  width: 100%;
+  padding: 1em;
+  gap: 1em;
+  border: 1px solid #483EFF;
+  margin-bottom: 1em;
+  align-items: center;
+
+
+}
+.megaCheckbox input{
+  margin: 0;
+  width: 1em;
+  height: 1em;
+  border: none;
+}
+
+.megaCheckbox div{
+  flex-grow: 100;
+}
+
 
 
 

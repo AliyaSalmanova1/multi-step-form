@@ -54,7 +54,7 @@ function PersonalInfo({personalInfo, setPersonalInfo}){
                 
                 
             </form>
-            <button onClick={validate}>Next Step</button>
+            <button className="nextStep-button" onClick={validate}>Next Step</button>
             
         </>
         
