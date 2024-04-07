@@ -7,13 +7,9 @@ const SummaryPage = (props) => {
 
   const { planInfo: {plan,
     monthYear
-  }, addOns: {
-    onlineService,
-    largerStorage,
-    customizableProfile
-  }} = props
+  }, addOns} = props
 
-  const { addOns } = props
+
 
   const navigate = useNavigate();
 
@@ -53,7 +49,7 @@ const SummaryPage = (props) => {
 
   return (
     <>
-    <div>
+    <div className="summaryBox">
       <section className="section">
         <h3>{plan} ({specifications[0]})</h3>
         <a>Change</a>

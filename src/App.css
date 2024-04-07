@@ -4,6 +4,9 @@
   display: flex;
   
 }
+header{
+  margin-bottom: 2em;
+}
 *{
   box-sizing: border-box;
 }
@@ -220,6 +223,10 @@ input:checked + span{
   display: flex;
   justify-content: space-between;
 
+}
+
+.summaryBox{
+  background-color: #F8F9FF;
 }
 
 

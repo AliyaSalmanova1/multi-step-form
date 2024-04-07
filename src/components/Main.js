@@ -26,8 +26,10 @@ function MainSection(){
 
     return (
         <div className="main">
-            <h1>{text[pathname].h1}</h1>
-            <p>{text[pathname].p}</p>
+            <header>
+                <h1>{text[pathname].h1}</h1>
+                <p>{text[pathname].p}</p>
+            </header>
 
             <Outlet />
 

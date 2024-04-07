@@ -32,6 +32,7 @@ const ThirdPage = (props) => {
       <form className="planPage-form">
         <label className="megaCheckbox">
           <input type="checkbox" 
+          checked={onlineService}
           onChange={() => {
             setAddOns({...addOns, onlineService: !onlineService})
           }}/>
@@ -44,6 +45,7 @@ const ThirdPage = (props) => {
         </label>
         <label className="megaCheckbox">
           <input type="checkbox"
+          checked={largerStorage}
           onChange={() => {
             setAddOns({...addOns, largerStorage: !largerStorage})
           }}/>
@@ -56,6 +58,7 @@ const ThirdPage = (props) => {
         </label>
         <label className="megaCheckbox">
           <input type="checkbox"
+          checked={customizableProfile}
           onChange={() => {
             setAddOns({...addOns, customizableProfile: !customizableProfile})
           }}/>
