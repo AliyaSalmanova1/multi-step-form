@@ -21,6 +21,7 @@ function PersonalInfo({personalInfo, setPersonalInfo}){
             <form className="infoForm">
                 <label>Name<br/>
                     <input 
+                    className="infoPage-text-input"
                     value={personalInfo.name}
                     onChange={(e) => {
                         setPersonalInfo({...personalInfo, name: e.target.value})}} 
@@ -29,6 +30,7 @@ function PersonalInfo({personalInfo, setPersonalInfo}){
                 </label> 
                 <label>Email Address<br/>
                     <input 
+                    className="infoPage-text-input"
                     value={personalInfo.email}
                     onChange={(e) => {
                         setPersonalInfo({...personalInfo, email: e.target.value})}} 
@@ -37,7 +39,8 @@ function PersonalInfo({personalInfo, setPersonalInfo}){
                 </label> 
                 <label>Phone Number{phoneReq ? <span className="red-text">This field is required</span> : <></>}<br/>
                     <input 
-                    className={`${phoneReq ? 'redBorder' : ''}`}
+            
+                    className={`infoPage-text-input ${phoneReq ? 'redBorder' : ''}`}
                     value={personalInfo.phone}
                     onChange={(e) => {
                         setPersonalInfo({...personalInfo, phone: e.target.value})}} 

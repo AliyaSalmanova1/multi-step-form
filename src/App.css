@@ -60,8 +60,8 @@ a:active{
 .circle{
   border-radius: 30px;
   border: 1px solid white;
-  height: 50px;
-  width: 50px;
+  height: 5vw !important;
+  width: 5vw !important;
   color: white;
   display: flex;
   justify-content: center;
@@ -83,7 +83,7 @@ a:active{
   
 }
 
-input{
+.infoPage-text-input{
   width: 100%;
   padding: .5em;
   font-size: 1.1rem;
@@ -113,6 +113,71 @@ input:invalid, .redBorder{
 .plan-option{
   width: 138px;
   height: 160px;
+}
+
+.switch-container{
+  position: relative;
+  display: inline-block;
+  width: 6em !important;
+  background-color: gray;
+  height: 50%;
+
+
+}
+.switch-container input{
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  margin: 0;
+  padding: 0;
+  
+  
+}
+.switch-container span{
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: inline-block;
+  height: 80%;
+  background-color: white;
+  width: 2em;
+  z-index: 5;
+  transition: all 0.1s ease-in;
+}
+
+input:checked + span{
+  transform: translateX(2em);
+}
+
+.planPage-form{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  
+
+}
+.grayBox{
+  width: 100%;
+  background-color: #D6D9E6;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 1em;
+  align-items: center;
+  margin-top: 2.5em;
+  height: 3em;
+
+}
+
+.darkText{
+  color: #022959;
+
+}
+.darktext, .lightText{
+  transition: color 0.1s ease-in;
+}
+.lightText{
+  color: #9699AA;
 }
 
 
