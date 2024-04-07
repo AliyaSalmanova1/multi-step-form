@@ -5,6 +5,7 @@ import SelectionBox from "./components/Selections.js"
 import PersonalInfo from "./components/Info.js"
 import MainSection from "./components/Main.js"
 import ThirdPage from "./components/ThirdPage.js"
+import SummaryPage from "./components/Summary.js"
 import PlanSelectionPage from "./components/PlanPage.js"
 import { useState } from "react";
 
@@ -16,7 +17,7 @@ function App() {
     phone: ''
   })
 
-  const [plan, setPlan] = useState({
+  const [planInfo, setPlan] = useState({
     plan: 'arcade',
     monthYear: true
   })
@@ -27,17 +28,17 @@ function App() {
     customizableProfile: false
   })
 
-  console.log('plan', plan)
+
 
 
   return (
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<SelectionBox />}>
-          <Route index element={<PersonalInfo personalInfo={personalInfo} setPersonalInfo={setPersonalInfo}/>}/>
-          <Route path="plan" element={<PlanSelectionPage plan={plan} setPlan={setPlan}/>}/>
+          <Route index element={<PersonalInfo personalInfo={personalInfo} setPersonalInfo={setPersonalInfo} />}/>
+          <Route path="plan" element={<PlanSelectionPage planInfo={planInfo} setPlan={setPlan} />}/>
           <Route path="add-ons" element={<ThirdPage addOns={addOns} setAddOns={setAddOns} />}/>
-          <Route path="summary" element={<PersonalInfo />}/>
+          <Route path="summary" element={<SummaryPage planInfo={planInfo} addOns={addOns}/>}/>
         </Route>
 
       </Routes>

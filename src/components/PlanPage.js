@@ -7,7 +7,7 @@ import { useNavigate } from "react-router-dom"
 
 const PlanSelectionPage = (props) => {
 
-const { plan: { 
+const { planInfo: { 
   plan,
   monthYear
 }, 

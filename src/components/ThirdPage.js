@@ -3,7 +3,14 @@ import React, { useState } from 'react';
 import { useNavigate } from "react-router-dom"
 
 
-const ThirdPage = () => {
+const ThirdPage = (props) => {
+
+  const { addOns: {
+    onlineService,
+    largerStorage,
+    customizableProfile
+  }, setAddOns} = props
+  const {addOns} = props;
 
   const navigate = useNavigate();
 
@@ -14,7 +21,9 @@ const ThirdPage = () => {
 
   }
 
-  
+
+
+
 
 
 
@@ -22,7 +31,10 @@ const ThirdPage = () => {
     <>
       <form className="planPage-form">
         <label className="megaCheckbox">
-          <input type="checkbox"/>
+          <input type="checkbox" 
+          onChange={() => {
+            setAddOns({...addOns, onlineService: !onlineService})
+          }}/>
           <div>
             <h3>Online service</h3>
             <p>Access to multiplayer games</p>
@@ -31,7 +43,10 @@ const ThirdPage = () => {
           
         </label>
         <label className="megaCheckbox">
-          <input type="checkbox"/>
+          <input type="checkbox"
+          onChange={() => {
+            setAddOns({...addOns, largerStorage: !largerStorage})
+          }}/>
           <div>
             <h3>Larger storage</h3>
             <p>Extra 1TB of cloud save</p>
@@ -40,7 +55,10 @@ const ThirdPage = () => {
           
         </label>
         <label className="megaCheckbox">
-          <input type="checkbox"/>
+          <input type="checkbox"
+          onChange={() => {
+            setAddOns({...addOns, customizableProfile: !customizableProfile})
+          }}/>
           <div>
             <h3>Customizable Profile</h3>
             <p>Custom theme on your profile</p>

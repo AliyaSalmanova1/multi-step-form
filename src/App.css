@@ -216,6 +216,12 @@ input:checked + span{
   flex-grow: 100;
 }
 
+.section{
+  display: flex;
+  justify-content: space-between;
+
+}
+
 
 
 
