@@ -17,10 +17,10 @@ h3, p{
 
 .nav-container{
   background-image: url(./images/purpleBg.png);
-  background-size: 100%;
+  background-size: 100% auto;
   background-repeat: no-repeat;
   height: 100%;
-  width: 30%;
+  width: auto;
 
   
 }
@@ -230,5 +230,42 @@ input:checked + span{
 }
 
 
+@media(max-width: 530px){
+  .page{
+    flex-direction: column;
+    padding: 0;
+    position: relative;
 
+  }
+
+  .main{
+    border: 1px solid red;
+    width: 80%;
+    height: 60%;
+    position: absolute;
+    top: 20vh;
+    left: 10%;
+
+    
+  
+  }
+
+  .link-text{
+    display: none;
+  }
+
+  .nav-container{
+    background-image: url(./images/verticalBg.png);
+    width: 100vw;
+
+  }
+
+  .nav{
+    display: flex;
+    justify-content: space-between;
+    width: 40%;
+    margin: auto auto;
+  }
+
+}
 
