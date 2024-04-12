@@ -40,7 +40,7 @@ setPlan} = props
               }}>
                   
                   <img src={orangeIcon} />
-                  <div>
+                  <div className="plan-option-text">
                     <h2>Arcade</h2>
                     <p>$9/mo</p>
                   </div>
@@ -52,7 +52,7 @@ setPlan} = props
 
               }}>
                   <img src={pinkIcon} />
-                  <div>
+                  <div className="plan-option-text">
                     <h2>Advanced</h2>
                     <p>$12/mo</p>
                   </div>
@@ -64,7 +64,7 @@ setPlan} = props
 
               }}>
                   <img src={purpleIcon} />
-                  <div>
+                  <div className="plan-option-text">
                     <h2>Pro</h2>
                     <p>$15/mo</p>
                   </div>
