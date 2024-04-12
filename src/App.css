@@ -1,3 +1,8 @@
+#root{
+  width: 100vw;
+  height: 100vh;
+}
+
 .page{
   padding: 1em;
   height: 100vh;
@@ -76,12 +81,13 @@ a:active{
 .circle{
   border-radius: 50%;
   border: 1px solid white;
-  height: 5vw !important;
-  width: 5vw !important;
+  height: 5vw;
+  width: 5vw;
   color: white;
   display: flex;
   justify-content: center;
   align-items: center;
+  font-size: 1.5rem;
 
 }
 
@@ -118,7 +124,8 @@ a:active{
 
 .infoPage-text-input, 
 .nextStep-button,
-.megaCheckbox{
+.megaCheckbox,
+.grayBox, .plan-option{
   border-radius: 10px;
 }
 
@@ -142,40 +149,44 @@ input:invalid, .redBorder{
 .plan-option{
   width: 138px;
   height: 160px;
+  border: 1px solid #483EFF;
+  background-color: white;
 }
 
 .switch-container{
   position: relative;
-  display: inline-block;
-  width: 6em !important;
-  background-color: gray;
+  display: flex;
+  width: 5em !important;
+  background-color: #022959;
   height: 50%;
-
+  border-radius: 30px;
+  align-items: center;
 
 }
 .switch-container input{
-  width: 100%;
-  height: 100%;
+  width: 0%;
+  height: 0%;
   opacity: 0;
   margin: 0;
   padding: 0;
   
   
+  
 }
 .switch-container span{
-  position: absolute;
-  top: 0;
-  left: 0;
+
   display: inline-block;
-  height: 80%;
+  height: 1em;
   background-color: white;
-  width: 2em;
+  width: 1em;
   z-index: 5;
+  border-radius: 50%;
   transition: all 0.1s ease-in;
+  margin: 0 0.5em;
 }
 
 input:checked + span{
-  transform: translateX(2em);
+  transform: translateX(300%);
 }
 
 .planPage-form{
@@ -187,7 +198,7 @@ input:checked + span{
 }
 .grayBox{
   width: 100%;
-  background-color: #D6D9E6;
+  background-color: #F8F9FF;
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -208,7 +219,6 @@ input:checked + span{
 .lightText{
   color: #9699AA;
 }
-
 
 .megaCheckbox{
 
@@ -249,12 +259,30 @@ input:checked + span{
 }
 
 
-@media(max-width: 700px){
+@media(orientation: portrait){
   .page{
     flex-direction: column;
     padding: 0;
     position: relative;
 
+  }
+  .plan-options{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+  .plan-option{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    
+  }
+
+  .circle{
+    width: 10vw;
+    height: 10vw;
+    min-width: 50px;
+    min-height: 50px;
   }
   .h1{
     margin-top: 0;
@@ -262,20 +290,15 @@ input:checked + span{
 
   .main{
     border: 1px solid red;
-    width: 80%;
+    width: 90%;
 
     position: absolute;
     top: 20vh;
-    left: 10%;
+    left: 5%;
     background-color: white;
-    
-    
-    
     
     border-radius: 10px;
 
-    
-  
   }
   .secondHalf{
     width: 100%;
@@ -292,28 +315,34 @@ input:checked + span{
     background-image: url(./images/verticalBg.png);
     width: 100vw;
     height: 30vh;
-   
-
+  
     min-height: 150px;
-    
-
+  
   }
 
   .nav{
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
     justify-content: space-between;
-    width: 40%;
+  
+    width: 60%;
     margin: auto auto;
+    padding-top : 5vh;
+
+    /*@media(max-width: 370px){
+      grid-template-columns: repeat(2, 1fr);
+    }*/
     
   }
   .nav a{
-    padding-top : 20%;
+    
+    margin: 0 auto;
   }
   .grayArea{
     background-color: #EFF5FF;
     height: 60vh;
     width: 100%;
-    min-height: 470px;
+    min-height: 450px;
 
   }
 
@@ -325,4 +354,21 @@ input:checked + span{
   }
 
 }
+
+@media(max-width: 400px){
+  .main{
+    top: 12vh;
+    padding: 1em;
+  }
+  .nextStep-button{
+    margin: 0.5em 2em;
+  }
+  .nav{
+    padding-top: 3vh;
+    width: 70%;
+  }
+
+}
+
+
 

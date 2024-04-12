@@ -40,8 +40,11 @@ setPlan} = props
               }}>
                   
                   <img src={orangeIcon} />
-                  <h2>Arcade</h2>
-                  <p>$9/mo</p>
+                  <div>
+                    <h2>Arcade</h2>
+                    <p>$9/mo</p>
+                  </div>
+                  
               </button>
               <button className="plan-option" id="advanced" onClick={(e) => {
                 e.preventDefault();
@@ -49,8 +52,11 @@ setPlan} = props
 
               }}>
                   <img src={pinkIcon} />
-                  <h2>Advanced</h2>
-                  <p>$12/mo</p>
+                  <div>
+                    <h2>Advanced</h2>
+                    <p>$12/mo</p>
+                  </div>
+                  
               </button>
               <button className="plan-option" id="pro" onClick={(e) => {
                 e.preventDefault();
@@ -58,8 +64,11 @@ setPlan} = props
 
               }}>
                   <img src={purpleIcon} />
-                  <h2>Pro</h2>
-                  <p>$15/mo</p>
+                  <div>
+                    <h2>Pro</h2>
+                    <p>$15/mo</p>
+                  </div>
+                  
               </button>
               
           </div>
