@@ -62,11 +62,19 @@ a:active{
 }
 .link-text h3{
   margin: 0.2em;
+  display: inline-block;
+  padding: 0px;
+
+
+  @media(max-width: 950px){
+    width: 20px;
+  }
+
 }
 
 
 .circle{
-  border-radius: 30px;
+  border-radius: 50%;
   border: 1px solid white;
   height: 5vw !important;
   width: 5vw !important;
@@ -241,7 +249,7 @@ input:checked + span{
 }
 
 
-@media(max-width: 530px){
+@media(max-width: 700px){
   .page{
     flex-direction: column;
     padding: 0;
@@ -280,9 +288,14 @@ input:checked + span{
   }
 
   .nav-container{
+
     background-image: url(./images/verticalBg.png);
     width: 100vw;
     height: 30vh;
+   
+
+    min-height: 150px;
+    
 
   }
 
@@ -297,15 +310,16 @@ input:checked + span{
     padding-top : 20%;
   }
   .grayArea{
-    background-color: gray;
+    background-color: #EFF5FF;
     height: 60vh;
     width: 100%;
     min-height: 470px;
+
   }
 
 }
 
-@media(min-width: 530px){
+@media(min-width: 700px){
   .nav-container{
     border-radius: 10px;
   }
