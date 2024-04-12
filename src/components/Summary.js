@@ -83,7 +83,7 @@ const SummaryPage = (props) => {
           
 
      
-      <button className="nextStep-button" onClick={next}>Next Step</button>
+  
     </>
     
 

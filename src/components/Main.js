@@ -25,15 +25,27 @@ function MainSection(){
     }
 
     return (
-        <div className="main">
-            <header>
-                <h1>{text[pathname].h1}</h1>
-                <p>{text[pathname].p}</p>
-            </header>
+        <div className="secondHalf">
+            <div className="grayArea">
+                <div className="main">
+                    <header>
+                        <h1 className="h1">{text[pathname].h1}</h1>
+                        <p>{text[pathname].p}</p>
+                    </header>
 
-            <Outlet />
+                    <div className="vertical-container">
+                        <Outlet />
 
+                    </div>
+                    
+                
+
+                </div>
+                
+            </div>
+            <button className="nextStep-button">Next Step</button>
         </div>
+        
         
     )
 

@@ -81,7 +81,7 @@ setPlan} = props
           
 
       </form>
-      <button className="nextStep-button" onClick={next}>Next Step</button>
+      
     </>
     
 
