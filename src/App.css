@@ -9,8 +9,10 @@
 
 .page{
   padding: 1em;
+  padding-right: 0;
   height: 100vh;
   display: flex;
+
   
 }
 h1, h2{
@@ -37,6 +39,7 @@ h3, p{
   background-repeat: no-repeat;
   height: 100%;
   width: 30vw;
+  min-width: 250px;
 
   
 }
@@ -73,6 +76,7 @@ a:active{
   color: white;
   flex-grow: 999;
   width: 60%;
+  margin-right: 0.5em;
   
 }
 .link-text p{
@@ -114,6 +118,13 @@ a:active{
 
   margin: 0 auto;
   padding: 2em;
+  width: 50vw;
+  
+
+  @media(orientation: landscape){
+    min-width: 570px;
+    max-width: 630px;
+  }
 
 
 
@@ -160,6 +171,9 @@ a:active{
   height: 50px;*/
 
 }
+.nextStep-button p{
+  font-size: 1rem;
+}
 
 
 
@@ -173,6 +187,7 @@ input:invalid, .redBorder{
 .plan-options{
   display: flex;
   gap: 5%;
+  width: 100%;
   
 }
 .plan-option{
@@ -182,7 +197,7 @@ input:invalid, .redBorder{
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  width: 130px;
+  width: 30%;
   padding: 1em;
 
 }
@@ -321,6 +336,8 @@ input:checked + span{
 }
 
 
+
+
 @media(orientation: portrait){
   .page{
     flex-direction: column;
@@ -371,6 +388,8 @@ input:checked + span{
     
     border-radius: 10px;
 
+    
+
   }
   .secondHalf{
     width: 100%;
@@ -389,6 +408,7 @@ input:checked + span{
     height: 25vh;
   
     min-height: 150px;
+    
     
   
   }
@@ -457,6 +477,8 @@ footer{
   }
 
 }
+
+
 
 
 
