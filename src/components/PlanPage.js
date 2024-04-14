@@ -40,9 +40,11 @@ setPlan} = props
               }}>
                   
                   <img src={orangeIcon} />
-                  <div className="plan-option-text">
+                  <div className={`plan-option-text ${monthYear ? '' : 'small-gap'}`}>
                     <h2>Arcade</h2>
-                    <p>$9/mo</p>
+                    <p className="price">{monthYear ? '$9/mo' : '$90/yr'}</p>
+                    {!monthYear ? <p className="free">2 months free</p> : <></>}
+                    
                   </div>
                   
               </button>
@@ -52,10 +54,12 @@ setPlan} = props
 
               }}>
                   <img src={pinkIcon} />
-                  <div className="plan-option-text">
+                  <div className={`plan-option-text ${monthYear ? '' : 'small-gap'}`}>
                     <h2>Advanced</h2>
-                    <p>$12/mo</p>
+                    <p className="price">{monthYear ? '$12/mo' : '$120/yr'}</p>
+                    {!monthYear ? <p className="free">2 months free</p> : <></>}
                   </div>
+                  
                   
               </button>
               <button className="plan-option" id="pro" onClick={(e) => {
@@ -64,10 +68,12 @@ setPlan} = props
 
               }}>
                   <img src={purpleIcon} />
-                  <div className="plan-option-text">
+                  <div className={`plan-option-text ${monthYear ? '' : 'small-gap'}`}>
                     <h2>Pro</h2>
-                    <p>$15/mo</p>
+                    <p className="price">{monthYear ? '$15/mo' : '$150/yr'}</p>
+                    {!monthYear ? <p className="free">2 months free</p> : <></>}
                   </div>
+                  
                   
               </button>
               

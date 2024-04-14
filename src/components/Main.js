@@ -43,7 +43,10 @@ function MainSection(){
                 </div>
                 
             </div>
-            <button className="nextStep-button">Next Step</button>
+            <footer>
+                <button className="nextStep-button"><p>Next Step</p></button>
+            </footer>
+            
         </div>
         
         
