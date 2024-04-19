@@ -20,16 +20,21 @@ body{
   display: flex;
   background-color: white;
   border-radius: 10px;
+
   @media(orientation: landscape) and (min-width: 900px) and (min-height: 700px){
     width: 70vw;
+    max-width: 1210px;
+    max-height: 845px;
+    min-width: 630px;
 
 
   }
-  @media(orientation: landscape) and (min-height: 700px){
+  @media(orientation: landscape) and (min-height: 575px){
 
     height: 80vh;
 
   }
+  
 
   
 }
@@ -106,7 +111,7 @@ a:active{
   display: inline-block;
   padding: 0px;
   width: 100%;
-  word-wrap: wrap;
+  word-wrap: break-word;
 
 
 
@@ -123,6 +128,8 @@ a:active{
   border: 1px solid white;
   height: 5vw;
   width: 5vw;
+  max-width: 80px;
+  max-height: 80px;
   color: white;
   display: flex;
   justify-content: center;
@@ -136,15 +143,12 @@ a:active{
 
   margin: 0 auto;
   padding: 2em;
-  width: 50vw;
+  width: 40vw;
   
-
   @media(orientation: landscape){
     min-width: 500px;
-    max-width: 630px;
+    max-width: 430px;
   }
-
-
 
 }
 

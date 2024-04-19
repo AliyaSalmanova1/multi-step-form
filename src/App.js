@@ -9,7 +9,7 @@ import SummaryPage from "./components/Summary.js"
 import PlanSelectionPage from "./components/PlanPage.js"
 import { useState } from "react";
 
-function App() {
+const App = () => {
 
   const [personalInfo, setPersonalInfo] = useState({
     name: '',
