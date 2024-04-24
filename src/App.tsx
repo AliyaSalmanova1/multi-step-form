@@ -1,3 +1,4 @@
+import React from 'react'
 import logo from './logo.svg';
 import './App.css';
 import { BrowserRouter, Routes, Route, Link } from "react-router-dom"
@@ -9,7 +10,7 @@ import SummaryPage from "./components/Summary.js"
 import PlanSelectionPage from "./components/PlanPage.js"
 import { useState } from "react";
 
-const App = () => {
+const App: React.FC = () => {
 
   const [personalInfo, setPersonalInfo] = useState({
     name: '',

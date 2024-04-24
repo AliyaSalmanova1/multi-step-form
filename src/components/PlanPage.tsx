@@ -4,8 +4,16 @@ import pinkIcon from "../images/pinkIcon.png"
 import purpleIcon from "../images/purpleIcon.png"
 import { useNavigate } from "react-router-dom"
 
-
-const PlanSelectionPage = (props) => {
+interface PlanProps {
+  planInfo : {plan: string;
+  monthYear: boolean;
+  };
+  setPlan: React.Dispatch<React.SetStateAction<{
+    plan: string;
+    monthYear: boolean;
+  }>>; 
+}
+const PlanSelectionPage: React.FC<PlanProps> = (props) => {
 
 const { planInfo: { 
   plan,
@@ -18,7 +26,7 @@ setPlan} = props
   console.log('plan page rendering')
 
 
-  const monthlyYearly = (e) => {
+  const monthlyYearly = () => {
     setPlan({plan, monthYear: !monthYear})
 
   }
@@ -28,7 +36,7 @@ setPlan} = props
 
   }
 
-  const handleClick = (e, id) => {
+  const handleClick = (e: React.MouseEvent<HTMLButtonElement>, id: string) => {
     e.preventDefault();
     setPlan((existingPlan) => ({ ...existingPlan, plan: id, monthYear }))
 
@@ -42,7 +50,7 @@ setPlan} = props
           <div className="plan-options">
               <button className="plan-option" id="arcade" onClick={(e) => handleClick(e, "arcade")}>
                   
-                  <img src={orangeIcon} />
+                  <img src={orangeIcon} alt="orange icon" />
                   <div className={`plan-option-text ${monthYear ? '' : 'small-gap'}`}>
                     <h2>Arcade</h2>
                     <p className="price">{monthYear ? '$9/mo' : '$90/yr'}</p>
@@ -97,7 +105,7 @@ setPlan} = props
 
     
 
-  );
+  )
 };
 
 export default PlanSelectionPage;
