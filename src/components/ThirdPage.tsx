@@ -1,9 +1,15 @@
 import React, { useState } from 'react';
 
 import { useNavigate } from "react-router-dom"
+import { PlanInfoType, AddOnsType } from "../types/types"
 
+interface ThirdPgProps{
+  addOns: AddOnsType;
+  setAddOns: React.Dispatch<React.SetStateAction<AddOnsType>>
+};
+  
 
-const ThirdPage = (props) => {
+const ThirdPage = (props: ThirdPgProps) => {
 
   const { addOns: {
     onlineService,

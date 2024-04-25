@@ -1,3 +1,4 @@
+import React from 'react'
 import { Outlet, useLocation } from "react-router-dom"
 
 
@@ -29,8 +30,8 @@ function MainSection(){
             <div className="grayArea">
                 <div className="main">
                     <header>
-                        <h1 className="h1">{text[pathname].h1}</h1>
-                        <p>{text[pathname].p}</p>
+                        <h1 className="h1">{text[pathname as keyof typeof text].h1}</h1>
+                        <p>{text[pathname as keyof typeof text].p}</p>
                     </header>
 
                     <div className="vertical-container">

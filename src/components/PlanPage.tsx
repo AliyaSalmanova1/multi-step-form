@@ -1,17 +1,14 @@
 import React, { useState } from 'react';
-import orangeIcon from "../images/orangeIcon.png"
-import pinkIcon from "../images/pinkIcon.png"
-import purpleIcon from "../images/purpleIcon.png"
+//import orangeIcon from "../images/orangeIcon.png"
+//import pinkIcon from "../images/pinkIcon.png"
+//import purpleIcon from "../images/purpleIcon.png"
 import { useNavigate } from "react-router-dom"
 
+import { PlanInfoType, PlanType } from "../types/types"
+
 interface PlanProps {
-  planInfo : {plan: string;
-  monthYear: boolean;
-  };
-  setPlan: React.Dispatch<React.SetStateAction<{
-    plan: string;
-    monthYear: boolean;
-  }>>; 
+  planInfo : PlanInfoType;
+  setPlan: React.Dispatch<React.SetStateAction<PlanInfoType>>; 
 }
 const PlanSelectionPage: React.FC<PlanProps> = (props) => {
 
@@ -36,7 +33,7 @@ setPlan} = props
 
   }
 
-  const handleClick = (e: React.MouseEvent<HTMLButtonElement>, id: string) => {
+  const handleClick = (e: React.MouseEvent<HTMLButtonElement>, id: PlanType) => {
     e.preventDefault();
     setPlan((existingPlan) => ({ ...existingPlan, plan: id, monthYear }))
 
@@ -50,7 +47,7 @@ setPlan} = props
           <div className="plan-options">
               <button className="plan-option" id="arcade" onClick={(e) => handleClick(e, "arcade")}>
                   
-                  <img src={orangeIcon} alt="orange icon" />
+                  <img src={"../images/orangeIcon.png"} alt="orange icon" />
                   <div className={`plan-option-text ${monthYear ? '' : 'small-gap'}`}>
                     <h2>Arcade</h2>
                     <p className="price">{monthYear ? '$9/mo' : '$90/yr'}</p>
@@ -60,7 +57,7 @@ setPlan} = props
                   
               </button>
               <button className="plan-option" id="advanced" onClick={(e) => handleClick(e, "advanced")}>
-                  <img src={pinkIcon} />
+                  <img src={"../images/pinkIcon.png"} />
                   <div className={`plan-option-text ${monthYear ? '' : 'small-gap'}`}>
                     <h2>Advanced</h2>
                     <p className="price">{monthYear ? '$12/mo' : '$120/yr'}</p>
@@ -70,7 +67,7 @@ setPlan} = props
                   
               </button>
               <button className="plan-option" id="pro" onClick={(e) => handleClick(e, "pro")}>
-                  <img src={purpleIcon} />
+                  <img src={"../images/purpleIcon.png"} />
                   <div className={`plan-option-text ${monthYear ? '' : 'small-gap'}`}>
                     <h2>Pro</h2>
                     <p className="price">{monthYear ? '$15/mo' : '$150/yr'}</p>

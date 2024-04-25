@@ -1,5 +1,6 @@
+import React from 'react'
 import { NavLink, Outlet, useLocation } from "react-router-dom";
-import MainSection from "./Main.js"
+import MainSection from "./Main"
 
 function SelectionBox() {
 

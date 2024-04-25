@@ -1,14 +1,16 @@
 import React from 'react'
-import logo from './logo.svg';
+
 import './App.css';
 import { BrowserRouter, Routes, Route, Link } from "react-router-dom"
-import SelectionBox from "./components/Selections.js"
-import PersonalInfo from "./components/Info.js"
-import MainSection from "./components/Main.js"
-import ThirdPage from "./components/ThirdPage.js"
-import SummaryPage from "./components/Summary.js"
-import PlanSelectionPage from "./components/PlanPage.js"
+import SelectionBox from "./components/Selections"
+import PersonalInfo from "./components/Info"
+import MainSection from "./components/Main"
+import ThirdPage from "./components/ThirdPage"
+import SummaryPage from "./components/Summary"
+import PlanSelectionPage from "./components/PlanPage"
 import { useState } from "react";
+
+import { PlanInfoType } from "./types/types"
 
 const App: React.FC = () => {
 
@@ -18,7 +20,7 @@ const App: React.FC = () => {
     phone: ''
   })
 
-  const [planInfo, setPlan] = useState({
+  const [planInfo, setPlan] = useState<PlanInfoType>({
     plan: 'arcade',
     monthYear: true
   })

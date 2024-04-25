@@ -1,9 +1,15 @@
 import React, { useState } from 'react';
 
 import { useNavigate } from "react-router-dom"
+import { PlanInfoType, AddOnsType } from "../types/types"
 
 
-const SummaryPage = (props) => {
+interface SummaryProps{
+  planInfo: PlanInfoType;
+  addOns: AddOnsType;
+}
+
+const SummaryPage = (props : SummaryProps) => {
 
   const { planInfo: {plan,
     monthYear
@@ -32,12 +38,12 @@ const SummaryPage = (props) => {
 
   let initialPrice = monthYear ? priceForPlans[plan] : priceForPlans[plan]*10;
 
-  const specifications = monthYear ? ['Monthly', 'month', 'mo', 1] : 
+  const specifications: [string, string, string, number] = monthYear ? ['Monthly', 'month', 'mo', 1] : 
 ['Yearly', 'year', 'yr', 10]
 
   const totalPrice = Object.keys(addOns).reduce((acc, currAddOn) => {
     console.log('currAddOn', currAddOn)
-    if (currAddOn) return acc + (priceForExtras[currAddOn] * specifications[3] )
+    if (currAddOn) return acc + (priceForExtras[currAddOn as keyof typeof priceForExtras] * specifications[3] )
     else return acc;
 
   }, initialPrice)
@@ -61,7 +67,7 @@ const SummaryPage = (props) => {
         return value ?  (
         <section className="section">
           <p>{key}</p>
-          <p>{`+${monthYear ? priceForExtras[key] : priceForExtras[key]*10}/${specifications[2]}`}</p>
+          <p>{`+${monthYear ? priceForExtras[key as keyof typeof priceForExtras] : priceForExtras[key as keyof typeof priceForExtras]*10}/${specifications[2]}`}</p>
       
         </section>
         ) : <></>

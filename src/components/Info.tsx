@@ -1,7 +1,14 @@
 
-import { useState } from "react"
+import React, { useState } from "react"
 
-function PersonalInfo({personalInfo, setPersonalInfo}){
+import { PersonalInfoType } from "../types/types"
+
+interface InfoProps{
+    personalInfo: PersonalInfoType;
+    setPersonalInfo: React.Dispatch<React.SetStateAction<PersonalInfoType>>
+}
+
+function PersonalInfo({personalInfo, setPersonalInfo}: InfoProps){
 
     const [phoneReq, setPhoneReq] = useState(false)
 
